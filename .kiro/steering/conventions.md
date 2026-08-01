@@ -3,19 +3,40 @@
 **Project:** Paperku Landing Page - Custom Print Services  
 **Tech Stack:** Laravel 13 + Tailwind CSS v4 + Vite + Alpine.js 3.x  
 **PHP:** 8.3+ | **Node:** 20 LTS | **Font:** Instrument Sans  
-**Last Updated:** 2026-07-31
+**Last Updated:** 2026-08-01
+
+---
+
+## 🔥 CORE PRINCIPLES
+
+**CAVEMAN CODING:** Write simple, direct code. No premature abstraction. Hardcode first. If it works, ship it.
+
+**PONYTAIL LAZY:** Aggressively reuse patterns. Let framework handle complexity. Copy-paste is your best friend.
+
+**MOBILE-FIRST:** Design starts at 320px, progressively enhances to desktop.
+
+**DARK MODE NATIVE:** Both modes are designed, not inverted.
+
+💡 **WHY:** These principles = faster development + less token usage + working code faster.
+
+---
+
+## 📸 Visual References
+
+**Design screenshots located in `/screenshots/`:**
+- **pages/** - Full page layouts
+  - `Landing Page.png` - Complete homepage design
+  - `Page Service.png` - Services section detailed view
+  - `Page Teknologi.png` - Technology section detailed view
+- **images/** - Component-level details (1.png to 16.png)
+
+When uncertain about implementation, reference these screenshots.
 
 ---
 
 ## 🎯 Project Mission
 
 Build a professional, responsive landing page for Paperku (custom printing service in Surabaya) with native dark mode support. The design prioritizes simplicity, reusability, and mobile-first responsive layout from 320px to 1920px+.
-
-**Core Principles:**
-- **CAVEMAN CODING:** Write simple, direct code. No premature abstraction.
-- **PONYTAIL LAZY:** Aggressively reuse patterns. Let framework handle complexity.
-- **MOBILE-FIRST:** Design starts at 320px, progressively enhances to desktop.
-- **DARK MODE NATIVE:** Both modes are designed, not inverted.
 
 ---
 
@@ -24,35 +45,33 @@ Build a professional, responsive landing page for Paperku (custom printing servi
 ```
 paperku/web/
 ├── app/
-│   ├── Http/Controllers/
-│   │   └── ContactController.php      # Email form handler
-│   └── Mail/
-│       └── ContactFormMail.php        # Mailable class
+│   └── Http/Controllers/          # Future: ContactController
 ├── resources/
 │   ├── views/
 │   │   ├── layouts/
-│   │   │   └── app.blade.php          # Base layout (head, nav, footer)
+│   │   │   └── app.blade.php          # Base layout
 │   │   ├── components/
-│   │   │   ├── navbar.blade.php       # Sticky navigation
+│   │   │   ├── navbar.blade.php       # Sticky nav
 │   │   │   ├── footer.blade.php       # Site footer
-│   │   │   ├── service-card.blade.php # Reusable service card
-│   │   │   ├── stat-item.blade.php    # Stat display component
-│   │   │   └── section-heading.blade.php # Optional heading component
-│   │   └── landing.blade.php          # Main landing page (7 sections)
+│   │   │   ├── service-card.blade.php # Service grid item
+│   │   │   ├── stat-item.blade.php    # Stat display
+│   │   │   ├── client-logo.blade.php  # Logo with hover
+│   │   │   └── section-heading.blade.php # Optional heading
+│   │   └── landing.blade.php          # Main page (5 sections)
 │   ├── css/
-│   │   └── app.css                    # Tailwind v4 config (@theme, @layer)
+│   │   └── app.css                    # Tailwind v4 config
 │   └── js/
-│       └── app.js                     # Alpine.js initialization
+│       └── app.js                     # Alpine.js init
 ├── routes/
 │   └── web.php                        # Route::get('/', 'landing')
 ├── public/
-│   └── images/                        # Future: Real assets (logo, icons, photos)
+│   └── images/                        # Future: Real assets
 ├── .github/instructions/
-│   └── web.instructions.md            # Copilot code generation guide
+│   └── web.instructions.md            # Copilot guide
 ├── .kiro/steering/
 │   └── conventions.md                 # This file
-├── implementation_plan.md             # Full project specification
-├── composer.json                      # Laravel dependencies + Pint
+├── implementation_plan.md             # Full project spec
+├── composer.json                      # Laravel + Pint
 ├── package.json                       # Vite, Alpine.js
 └── vite.config.js                     # Asset bundling
 ```
@@ -65,12 +84,12 @@ paperku/web/
 
 | Token | Light Mode | Dark Mode | Usage |
 |-------|------------|-----------|-------|
-| BG Primary | `#FDFDFC` | `#0a0a0a` | Main page background |
-| BG Secondary | `#FFFFFF` | `#161615` | Cards, elevated surfaces |
+| BG Primary | `#FDFDFC` | `#0a0a0a` | Main background |
+| BG Secondary | `#FFFFFF` | `#161615` | Cards, elevated |
 | BG Tertiary | `#F8F9FA` | `#1a1a1a` | Alternate sections |
-| Text Primary | `#1b1b18` | `#EDEDEC` | Headings, important text |
-| Text Secondary | `#706f6c` | `#A1A09A` | Body text, descriptions |
-| Border | `#e3e3e0` | `#3E3E3A` | Dividers, card borders |
+| Text Primary | `#1b1b18` | `#EDEDEC` | Headings, important |
+| Text Secondary | `#706f6c` | `#A1A09A` | Body, descriptions |
+| Border | `#e3e3e0` | `#3E3E3A` | Dividers, borders |
 | Accent | `#f53003` | `#FF4433` | CTAs, hover states |
 
 ### Typography Scale
@@ -98,7 +117,7 @@ Max Width: max-w-7xl    /* 1280px */
 Padding:   px-4 sm:px-6 lg:px-8
 
 /* Grid Gaps */
-Cards:     gap-6        /* 24px between service cards */
+Cards:     gap-6        /* 24px between cards */
 Columns:   gap-8 lg:gap-12   /* Two-column layouts */
 ```
 
@@ -122,15 +141,12 @@ xl:  1280px  → Large desktop
 app.blade.php (Base Layout)
 ├── <x-navbar />
 ├── @yield('content')
-│   └── landing.blade.php
-│       ├── Hero Section
-│       ├── Services Grid
-│       │   └── 8x <x-service-card />
-│       ├── Technology Section
-│       ├── Stats Grid
-│       │   └── 4x <x-stat-item />
-│       ├── Materials Section
-│       └── Contact Form Section
+│   └── landing.blade.php (5 main sections)
+│       ├── 1. Hero Section
+│       ├── 2. Services Grid (8x <x-service-card />)
+│       ├── 3. Technology Section (4x <x-client-logo />)
+│       ├── 4. Stats Grid (4x <x-stat-item />)
+│       └── 5. Materials Section
 └── <x-footer />
 ```
 
@@ -161,14 +177,22 @@ app.blade.php (Base Layout)
 - **Props:** `number` (required), `label` (required)
 - **Features:** Large number display, uppercase label, center-aligned
 
-#### 4. Footer
+#### 4. Client Logo
+```blade
+<x-client-logo name="BCA" />
+<x-client-logo name="Toyota" src="/images/clients/toyota.png" />
+```
+- **Props:** `name` (required), `src` (optional)
+- **Features:** Grayscale default, color on hover, text fallback
+
+#### 5. Footer
 ```blade
 <x-footer />
 ```
 - **Props:** None (static content)
 - **Features:** 3-column grid (mobile stacks), copyright, payment logos
 
-#### 5. Section Heading (Optional)
+#### 6. Section Heading (Optional)
 ```blade
 <x-section-heading title="Our Services" subtitle="Professional printing solutions" />
 ```
@@ -180,26 +204,25 @@ app.blade.php (Base Layout)
 ## 🚀 Development Workflow
 
 ### Phase 1: Foundation (Current Phase)
-**Goal:** Build static, responsive landing page with all 7 sections
+**Goal:** Build static, responsive landing page with 5 main sections
 
 **Tasks:**
 1. ✅ Set up Laravel 13 + Tailwind v4 + Vite
 2. ✅ Configure Instrument Sans font
 3. ✅ Set up dark mode infrastructure
 4. 🔨 Create base layout (`layouts/app.blade.php`)
-5. 🔨 Build reusable components (navbar, footer, cards, stats)
-6. 🔨 Implement landing page with 7 sections
-7. 🔨 Add contact form with email handler
-8. 🔨 Add WhatsApp floating button
-9. 🔨 Test responsive behavior (mobile, tablet, desktop)
-10. 🔨 Test dark mode across all sections
+5. 🔨 Build reusable components (navbar, footer, cards, stats, client-logo)
+6. 🔨 Implement landing page with 5 sections
+7. 🔨 Add WhatsApp floating button
+8. 🔨 Test responsive behavior (mobile, tablet, desktop)
+9. 🔨 Test dark mode across all sections
 
 ### Phase 2: Interactivity (Future)
 - Mobile menu toggle functionality
 - Dark mode toggle button
 - Smooth scroll navigation
 - Stats counter animation on scroll
-- Form validation and feedback
+- Contact form with validation
 - Image lazy loading
 
 ### Phase 3: Content Management (Future)
@@ -229,8 +252,9 @@ When building from scratch, follow this sequence:
 1. `resources/views/components/navbar.blade.php`
 2. `resources/views/components/service-card.blade.php`
 3. `resources/views/components/stat-item.blade.php`
-4. `resources/views/components/footer.blade.php`
-5. `resources/views/components/section-heading.blade.php` (optional)
+4. `resources/views/components/client-logo.blade.php`
+5. `resources/views/components/footer.blade.php`
+6. `resources/views/components/section-heading.blade.php` (optional)
 
 **Tip:** Create all components in one operation, don't create them incrementally.
 
@@ -243,26 +267,18 @@ When building from scratch, follow this sequence:
 
 @section('content')
   {{-- Section 1: Hero --}}
-  {{-- Section 2: Services Grid --}}
+  {{-- Section 2: Services Grid (8 cards) --}}
   {{-- Section 3: Technology/Client Logos --}}
-  {{-- Section 4: Stats --}}
+  {{-- Section 4: Stats (4 metrics) --}}
   {{-- Section 5: Materials/Quality --}}
-  {{-- Section 6: Contact Form --}}
 @endsection
 ```
 
-### Step 4: Backend (Contact Form)
-**Files:**
-1. `app/Http/Controllers/ContactController.php`
-2. `app/Mail/ContactFormMail.php`
-3. Update `routes/web.php`
-
-### Step 5: Route Configuration
+### Step 4: Route Configuration
 **File:** `routes/web.php`
 
 ```php
 Route::get('/', fn() => view('landing'));
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 ```
 
 ---
@@ -295,7 +311,7 @@ How many items?
 ├─ 2 items → grid-cols-1 lg:grid-cols-2
 ├─ 3 items → grid-cols-1 md:grid-cols-3
 ├─ 4 items (even) → grid-cols-2 lg:grid-cols-4
-└─ 4+ items (stats) → grid-cols-2 lg:grid-cols-4
+└─ 8 items (services) → grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
 ```
 
 ### Button Style?
@@ -422,115 +438,24 @@ Action importance?
 
 ---
 
-## 📧 Contact Form Implementation
+## 💡 Token Conservation (CAVEMAN & PONYTAIL)
 
-### Backend Setup
+### DO (Saves Tokens):
+- ✅ Hardcode values first, abstract only if needed 3+ times
+- ✅ Copy working patterns from `welcome.blade.php`
+- ✅ Use Tailwind utilities (no custom CSS files)
+- ✅ Batch create files (don't drip feed one by one)
+- ✅ Write complete code (no "// rest here" comments)
+- ✅ Reuse components aggressively
+- ✅ Let framework/library handle complexity
 
-#### Controller: `app/Http/Controllers/ContactController.php`
-```php
-<?php
-
-namespace App\Http\Controllers;
-
-use App\Mail\ContactFormMail;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-
-class ContactController extends Controller
-{
-    public function send(Request $request)
-    {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'phone' => 'nullable|string|max:20',
-            'message' => 'required|string|max:5000',
-        ]);
-
-        Mail::to('support@paperku.com')->send(new ContactFormMail($validated));
-
-        return back()->with('success', 'Thank you! We will get back to you soon.');
-    }
-}
-```
-
-#### Mailable: `app/Mail/ContactFormMail.php`
-```php
-<?php
-
-namespace App\Mail;
-
-use Illuminate\Bus\Queueable;
-use Illuminate\Mail\Mailable;
-use Illuminate\Queue\SerializesModels;
-
-class ContactFormMail extends Mailable
-{
-    use Queueable, SerializesModels;
-
-    public $data;
-
-    public function __construct(array $data)
-    {
-        $this->data = $data;
-    }
-
-    public function build()
-    {
-        return $this->subject('New Contact Form Submission - Paperku')
-                    ->view('emails.contact')
-                    ->with('data', $this->data);
-    }
-}
-```
-
-#### Email Template: `resources/views/emails/contact.blade.php`
-```blade
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Contact Form</title>
-</head>
-<body style="font-family: sans-serif; line-height: 1.6; color: #333;">
-    <h2>New Contact Form Submission</h2>
-    
-    <p><strong>Name:</strong> {{ $data['name'] }}</p>
-    <p><strong>Email:</strong> {{ $data['email'] }}</p>
-    @if(isset($data['phone']))
-        <p><strong>Phone:</strong> {{ $data['phone'] }}</p>
-    @endif
-    
-    <p><strong>Message:</strong></p>
-    <p>{{ $data['message'] }}</p>
-</body>
-</html>
-```
-
-#### Route: `routes/web.php`
-```php
-use App\Http\Controllers\ContactController;
-
-Route::get('/', fn() => view('landing'));
-Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
-```
-
-### Frontend Form (in landing.blade.php)
-
-```blade
-<section id="contact" class="py-16 lg:py-24 bg-white dark:bg-[#0a0a0a]">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    {{-- Success Message --}}
-    @if(session('success'))
-      <div class="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-sm">
-        <p class="text-green-800 dark:text-green-200">{{ session('success') }}</p>
-      </div>
-    @endif
-    
-    {{-- Form (see Copilot instructions for full markup) --}}
-  </div>
-</section>
-```
+### DON'T (Wastes Tokens):
+- ❌ Premature abstraction or over-engineering
+- ❌ Custom CSS when Tailwind utility exists
+- ❌ Creating helpers for one-time use
+- ❌ Over-commenting obvious code
+- ❌ Asking permission for standard patterns
+- ❌ Building custom solutions when framework provides one
 
 ---
 
@@ -545,11 +470,13 @@ Add before `</body>` in `layouts/app.blade.php`:
   class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20BA5A] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300"
   aria-label="Chat on WhatsApp"
 >
-  {{-- WhatsApp SVG icon (see Copilot instructions for full SVG) --}}
+  <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
 </a>
 ```
 
-**Number Format:** `https://wa.me/628100668977` (country code + number, no spaces or symbols)
+**Number Format:** `https://wa.me/628100668977` (country code + number, no spaces)
 
 ---
 
@@ -558,8 +485,8 @@ Add before `</body>` in `layouts/app.blade.php`:
 ### Visual Testing
 
 #### Responsive Breakpoints
-- [ ] **320px:** Single column, readable text, touch-friendly buttons
-- [ ] **375px:** iPhone standard, common mobile size
+- [ ] **320px:** Single column, readable text, touch-friendly
+- [ ] **375px:** iPhone standard, common mobile
 - [ ] **768px:** Tablet, 2-column grids activate
 - [ ] **1024px:** Desktop, 4-column grids, full layout
 - [ ] **1280px:** Large desktop, max-width container centered
@@ -570,24 +497,21 @@ Add before `</body>` in `layouts/app.blade.php`:
 - [ ] Text remains readable (contrast check)
 - [ ] Borders visible but subtle
 - [ ] Hover states work in both modes
-- [ ] Form inputs styled for dark mode
 - [ ] No white flashes on load
 
 #### Interactive Elements
 - [ ] All buttons have hover states
 - [ ] Service cards scale on hover
-- [ ] Form inputs have focus states
+- [ ] Client logos grayscale → color on hover
 - [ ] Links have hover color change
 - [ ] WhatsApp button has hover scale
 
 ### Functional Testing
 
 - [ ] Navbar links scroll to sections (or navigate)
-- [ ] Contact form submits successfully
-- [ ] Form validation shows errors
-- [ ] Success message displays after submission
+- [ ] Service cards link properly
 - [ ] WhatsApp button opens chat in new tab
-- [ ] Mobile menu toggles (Phase 2)
+- [ ] Mobile menu structure ready (Phase 2)
 - [ ] No console errors in browser
 - [ ] Page loads without layout shift
 
@@ -640,18 +564,6 @@ php artisan view:clear  # Clear Blade cache
 - Check file location: `resources/views/components/navbar.blade.php`
 - Laravel auto-discovers components in `components/` directory
 - Use kebab-case: `<x-service-card>` not `<x-ServiceCard>`
-
-### Issue: Contact form not sending
-**Symptoms:** Form submits but no email received  
-**Solution:**
-- Check `.env` has mail configuration:
-  ```
-  MAIL_MAILER=smtp
-  MAIL_HOST=mailpit
-  MAIL_PORT=1025
-  ```
-- For local testing, use Mailpit or Mailtrap
-- For production, configure actual SMTP (e.g., SendGrid, Mailgun)
 
 ---
 
@@ -804,22 +716,20 @@ Before starting implementation:
 ### Build Order
 1. **Layout first:** `app.blade.php` with navbar and footer
 2. **Components next:** All blade components in batch
-3. **Landing page:** Section by section (hero → services → stats → etc.)
-4. **Backend:** Contact controller and mailable
-5. **Test:** Responsive + dark mode + functionality
+3. **Landing page:** Section by section (hero → services → technology → stats → materials)
+4. **Test:** Responsive + dark mode + functionality
 
 ### Success Criteria
 Phase 1 is complete when:
-- ✅ All 7 sections visible and styled
+- ✅ All 5 sections visible and styled
 - ✅ Responsive from 320px to 1920px+
 - ✅ Dark mode works throughout
-- ✅ Contact form sends emails
 - ✅ WhatsApp button links correctly
 - ✅ Zero console errors
 - ✅ Code passes Pint formatting
 
 ---
 
-**Last Updated:** 2026-07-31  
-**Reference:** `/implementation_plan.md`, `.github/instructions/web.instructions.md`  
+**Last Updated:** 2026-08-01  
+**Reference:** `.github/instructions/web.instructions.md`, `implementation_plan.md`  
 **Questions?** Check implementation plan for detailed execution steps.

@@ -3,115 +3,114 @@
 **Project:** Paperku Landing Page - Custom Print Services  
 **Stack:** Laravel 13 + Tailwind CSS v4 + Vite + Alpine.js 3.x  
 **Font:** Instrument Sans (400, 500, 600)  
-**Last Updated:** 2026-07-31
+**Last Updated:** 2026-08-01
+
+---
+
+## 🔥 CORE PRINCIPLES (READ THIS FIRST)
+
+**CAVEMAN CODING:** Write simple, direct code. No abstractions. Hardcode first. If you're thinking about patterns, you're overthinking.
+
+**PONYTAIL LAZY:** Copy-paste is your best friend. Reuse aggressively. Let framework do the work. Never reinvent.
+
+**WHY:** These principles = faster development + less token usage + working code faster.
+
+### Token Conservation Rules
+- ✅ Hardcode values first, abstract only if needed 3+ times
+- ✅ Copy working patterns from `welcome.blade.php`
+- ✅ Use Tailwind utilities (ZERO custom CSS)
+- ✅ Batch create files (don't drip feed)
+- ✅ Write complete code (no "// rest here" comments)
+- ❌ NO premature optimization or over-engineering
+- ❌ NO custom CSS when Tailwind utility exists
+- ❌ NO asking permission for standard patterns
+
+---
+
+## 📸 Design References
+
+**Visual Source:** `/screenshots/`
+- **pages/** - Full page layouts
+  - `Landing Page.png` - Complete homepage design
+  - `Page Service.png` - Services section detail
+  - `Page Teknologi.png` - Technology section detail
+- **images/** - Component details (1.png to 16.png)
+
+When uncertain about layout or styling, reference these screenshots.
 
 ---
 
 ## 🎯 Project Context
 
-You are working on a professional landing page for Paperku, a custom printing service in Surabaya, Indonesia. The site showcases printing services with a modern, clean design supporting both light and dark modes.
+Professional landing page for Paperku (custom printing service, Surabaya, Indonesia). Modern, clean design with native dark mode support.
 
 **Design Philosophy:**
-- **CAVEMAN CODING:** Simple, direct code. No over-abstraction.
-- **PONYTAIL LAZY:** Reuse patterns aggressively. Let framework do the work.
 - **Mobile-first:** Start at 320px, scale to 1920px+
-- **Dark mode native:** Not inverted, but designed for both modes
+- **Dark mode native:** Both modes designed, not inverted
+- **Component reuse:** If markup repeats 2+, make it a component
 
 ---
 
 ## 🎨 Design System
 
-### Color Palette
+### Color Palette (Tailwind Class Mappings)
 
-#### Light Mode
-```css
-/* Backgrounds */
---bg-primary:   #FDFDFC    /* Main page background */
---bg-secondary: #FFFFFF    /* Cards, elevated surfaces */
---bg-tertiary:  #F8F9FA    /* Subtle sections */
-
-/* Text */
---text-primary:   #1b1b18  /* Headings, important text */
---text-secondary: #706f6c  /* Body text, descriptions */
-
-/* Borders & Accents */
---border: #e3e3e0          /* Dividers, card borders */
---accent: #f53003          /* CTAs, hover states */
-```
-
-#### Dark Mode
-```css
-/* Backgrounds */
---bg-primary:   #0a0a0a    /* Main page background */
---bg-secondary: #161615    /* Cards, elevated surfaces */
---bg-tertiary:  #1a1a1a    /* Subtle sections */
-
-/* Text */
---text-primary:   #EDEDEC  /* Headings, important text */
---text-secondary: #A1A09A  /* Body text, descriptions */
-
-/* Borders & Accents */
---border: #3E3E3A          /* Dividers, card borders */
---accent: #FF4433          /* CTAs, hover states */
-```
-
-### Tailwind Class Mappings
-
-| Design Token | Light Mode Class | Dark Mode Class |
-|--------------|------------------|-----------------|
+| Token | Light Mode | Dark Mode |
+|-------|-----------|-----------|
 | BG Primary | `bg-[#FDFDFC]` | `dark:bg-[#0a0a0a]` |
 | BG Secondary | `bg-white` | `dark:bg-[#161615]` |
 | BG Tertiary | `bg-gray-50` | `dark:bg-[#1a1a1a]` |
 | Text Primary | `text-[#1b1b18]` | `dark:text-[#EDEDEC]` |
 | Text Secondary | `text-[#706f6c]` | `dark:text-[#A1A09A]` |
 | Border | `border-[#e3e3e0]` | `dark:border-[#3E3E3A]` |
+| Accent | `text-[#f53003]` | `dark:text-[#FF4433]` |
 
 ### Typography Scale
 
 ```blade
 {{-- Headings --}}
-<h1 class="text-5xl lg:text-6xl font-semibold leading-tight">Hero Heading</h1>
-<h2 class="text-4xl lg:text-5xl font-semibold">Section Heading</h2>
-<h3 class="text-3xl lg:text-4xl font-medium">Subsection Heading</h3>
-<h4 class="text-2xl lg:text-3xl font-medium">Card Heading</h4>
+<h1 class="text-5xl lg:text-6xl font-semibold leading-tight">Hero</h1>
+<h2 class="text-4xl lg:text-5xl font-semibold">Section</h2>
+<h3 class="text-3xl lg:text-4xl font-medium">Subsection</h3>
+<h4 class="text-2xl lg:text-3xl font-medium">Card</h4>
 
-{{-- Body Text --}}
-<p class="text-lg leading-relaxed">Large body text</p>
-<p class="text-base leading-normal">Normal body text</p>
+{{-- Body --}}
+<p class="text-lg leading-relaxed">Large body</p>
+<p class="text-base leading-normal">Normal body</p>
 <p class="text-sm leading-normal">Small text</p>
-<span class="text-xs uppercase tracking-wider">Caption/Label</span>
+<span class="text-xs uppercase tracking-wider">Label</span>
 ```
 
-### Spacing System
+### Spacing Standards
 
 ```css
 /* Section Padding */
-.section-mobile  { @apply py-16; }      /* 64px vertical */
-.section-desktop { @apply py-24; }      /* 96px vertical */
+Mobile:  py-16 (64px)
+Desktop: py-24 (96px)
 
 /* Container */
-.container-base  { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+Max Width: max-w-7xl (1280px)
+Padding:   px-4 sm:px-6 lg:px-8
 
 /* Grid Gaps */
-.gap-cards       { @apply gap-6; }      /* Card grids */
-.gap-columns     { @apply gap-8 lg:gap-12; } /* Two-column layouts */
+Cards:     gap-6
+Columns:   gap-8 lg:gap-12
 ```
 
 ### Responsive Breakpoints
 
-```css
-/* Tailwind v4 defaults */
-sm:  640px   /* Mobile landscape, small tablets */
-md:  768px   /* Tablets */
-lg:  1024px  /* Desktop */
-xl:  1280px  /* Large desktop */
-2xl: 1536px  /* Extra large */
+```
+sm:  640px  (Mobile landscape)
+md:  768px  (Tablet)
+lg:  1024px (Desktop)
+xl:  1280px (Large desktop)
+2xl: 1536px (Extra large)
 
-/* Common Grid Patterns */
-grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  /* Services, logos */
-grid-cols-2 lg:grid-cols-4                 /* Stats */
-grid-cols-1 md:grid-cols-3                 /* Footer */
-grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
+Common Grid Patterns:
+- Services: grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+- Stats: grid-cols-2 lg:grid-cols-4
+- Footer: grid-cols-1 md:grid-cols-3
+- Two-column: grid-cols-1 lg:grid-cols-2
 ```
 
 ---
@@ -125,12 +124,10 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 {{-- Usage: <x-navbar /> --}}
 <nav class="sticky top-0 z-50 h-16 bg-white/80 dark:bg-[#161615]/80 backdrop-blur-md border-b border-[#e3e3e0] dark:border-[#3E3E3A]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
-    {{-- Logo --}}
     <a href="/" class="text-xl font-semibold text-[#1b1b18] dark:text-[#EDEDEC]">
       Paperku
     </a>
     
-    {{-- Desktop Menu --}}
     <div class="hidden md:flex items-center gap-8">
       <a href="#" class="text-sm text-[#706f6c] dark:text-[#A1A09A] hover:text-[#1b1b18] dark:hover:text-[#EDEDEC] transition-colors">Home</a>
       <a href="#services" class="text-sm text-[#706f6c] dark:text-[#A1A09A] hover:text-[#1b1b18] dark:hover:text-[#EDEDEC] transition-colors">Services</a>
@@ -138,7 +135,6 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
       <a href="#contact" class="text-sm text-[#706f6c] dark:text-[#A1A09A] hover:text-[#1b1b18] dark:hover:text-[#EDEDEC] transition-colors">Get in Touch</a>
     </div>
     
-    {{-- Mobile Menu Button --}}
     <button @click="$store.menu.toggle()" class="md:hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -147,6 +143,8 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
   </div>
 </nav>
 ```
+
+---
 
 ### 2. Service Card Component
 **File:** `resources/views/components/service-card.blade.php`  
@@ -162,22 +160,21 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 @props(['title', 'href' => '#'])
 
 <a href="{{ $href }}" class="group block p-6 bg-white dark:bg-[#161615] border border-[#e3e3e0] dark:border-[#3E3E3A] rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300">
-  {{-- Icon Slot --}}
   <div class="mb-4">
     {{ $slot }}
   </div>
   
-  {{-- Title --}}
   <h3 class="text-lg font-medium text-[#1b1b18] dark:text-[#EDEDEC] mb-2">
     {{ $title }}
   </h3>
   
-  {{-- Learn More Link --}}
   <span class="text-sm text-[#706f6c] dark:text-[#A1A09A] group-hover:text-[#f53003] dark:group-hover:text-[#FF4433] transition-colors">
     Learn more →
   </span>
 </a>
 ```
+
+---
 
 ### 3. Stat Item Component
 **File:** `resources/views/components/stat-item.blade.php`  
@@ -198,16 +195,39 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 </div>
 ```
 
-### 4. Footer Component
+---
+
+### 4. Client Logo Component
+**File:** `resources/views/components/client-logo.blade.php`  
+**Props:** `name` (required), `src` (optional)
+
+```blade
+{{-- Usage: 
+<x-client-logo name="BCA" />
+<x-client-logo name="Toyota" src="/images/clients/toyota.png" />
+--}}
+
+@props(['name', 'src' => null])
+
+<div class="flex items-center justify-center p-6 grayscale hover:grayscale-0 transition-all duration-300">
+  @if($src)
+    <img src="{{ $src }}" alt="{{ $name }}" class="h-12 object-contain">
+  @else
+    <div class="text-lg font-semibold text-gray-400 dark:text-gray-600">{{ $name }}</div>
+  @endif
+</div>
+```
+
+---
+
+### 5. Footer Component
 **File:** `resources/views/components/footer.blade.php`
 
 ```blade
 {{-- Usage: <x-footer /> --}}
 <footer class="bg-gray-100 dark:bg-[#161615] border-t border-[#e3e3e0] dark:border-[#3E3E3A]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    {{-- Three Column Grid --}}
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-      {{-- Column 1: Branding --}}
       <div>
         <h3 class="text-xl font-semibold text-[#1b1b18] dark:text-[#EDEDEC] mb-3">Paperku</h3>
         <p class="text-sm text-[#706f6c] dark:text-[#A1A09A]">
@@ -215,7 +235,6 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
         </p>
       </div>
       
-      {{-- Column 2: Quick Links --}}
       <div>
         <h4 class="text-sm font-semibold text-[#1b1b18] dark:text-[#EDEDEC] uppercase tracking-wider mb-3">Quick Links</h4>
         <ul class="space-y-2">
@@ -226,7 +245,6 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
         </ul>
       </div>
       
-      {{-- Column 3: Contact --}}
       <div>
         <h4 class="text-sm font-semibold text-[#1b1b18] dark:text-[#EDEDEC] uppercase tracking-wider mb-3">Contact</h4>
         <ul class="space-y-2 text-sm text-[#706f6c] dark:text-[#A1A09A]">
@@ -237,7 +255,6 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
       </div>
     </div>
     
-    {{-- Bottom Section --}}
     <div class="pt-8 border-t border-[#e3e3e0] dark:border-[#3E3E3A] flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-sm text-[#706f6c] dark:text-[#A1A09A]">
         Copyright © 2025 Paperku. All rights reserved
@@ -253,7 +270,9 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 </footer>
 ```
 
-### 5. Section Heading Component (Optional)
+---
+
+### 6. Section Heading Component (Optional)
 **File:** `resources/views/components/section-heading.blade.php`  
 **Props:** `title` (required), `subtitle` (optional)
 
@@ -261,7 +280,7 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 {{-- Usage: 
 <x-section-heading 
   title="Our Services" 
-  subtitle="Professional printing solutions for all your needs" 
+  subtitle="Professional printing solutions" 
 />
 --}}
 
@@ -287,7 +306,7 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 ```blade
 <section class="py-16 lg:py-24 bg-white dark:bg-[#0a0a0a]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    {{-- Section content --}}
+    {{-- Content --}}
   </div>
 </section>
 ```
@@ -296,7 +315,7 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 ```blade
 <section class="py-16 lg:py-24 bg-gray-50 dark:bg-[#161615]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    {{-- Section content --}}
+    {{-- Content --}}
   </div>
 </section>
 ```
@@ -308,7 +327,7 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 </a>
 ```
 
-### Button - Secondary (Outline)
+### Button - Secondary
 ```blade
 <a href="#" class="inline-block px-6 py-2 border border-[#1b1b18] dark:border-white text-[#1b1b18] dark:text-white rounded-sm hover:bg-[#1b1b18] hover:text-white dark:hover:bg-white dark:hover:text-[#1b1b18] transition-colors">
   Button Text
@@ -318,22 +337,15 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 ### Card Pattern
 ```blade
 <div class="p-6 bg-white dark:bg-[#161615] border border-[#e3e3e0] dark:border-[#3E3E3A] rounded-lg shadow-sm hover:shadow-md transition-shadow">
-  {{-- Card content --}}
+  {{-- Content --}}
 </div>
 ```
 
 ### Two-Column Layout
 ```blade
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-  {{-- Column 1 --}}
-  <div>
-    {{-- Content or image --}}
-  </div>
-  
-  {{-- Column 2 --}}
-  <div>
-    {{-- Content or image --}}
-  </div>
+  <div>{{-- Column 1 --}}</div>
+  <div>{{-- Column 2 --}}</div>
 </div>
 ```
 
@@ -343,7 +355,7 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
   <x-service-card title="Marketing Materials">
     <span class="text-4xl">📄</span>
   </x-service-card>
-  {{-- More cards... --}}
+  {{-- 7 more cards... --}}
 </div>
 ```
 
@@ -368,101 +380,24 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 
 ### Mobile Menu Toggle
 ```blade
-{{-- In navbar component --}}
 <div x-data="{ open: false }">
-  <button @click="open = !open" class="md:hidden">
-    <svg>...</svg>
-  </button>
-  
-  <nav x-show="open" x-cloak class="md:hidden">
-    {{-- Mobile menu items --}}
-  </nav>
+  <button @click="open = !open">Menu</button>
+  <nav x-show="open" x-cloak>{{-- Menu items --}}</nav>
 </div>
 ```
 
-### Dark Mode Toggle (Optional)
+### Dark Mode Toggle
 ```blade
-<button @click="document.documentElement.classList.toggle('dark')" class="p-2">
-  <svg class="w-5 h-5">...</svg>
+<button @click="document.documentElement.classList.toggle('dark')">
+  Toggle Dark Mode
 </button>
 ```
 
-### Form Submission State
+### Form Loading State
 ```blade
 <form x-data="{ loading: false }" @submit="loading = true">
-  <button type="submit" :disabled="loading" x-text="loading ? 'Sending...' : 'Send Message'">
-  </button>
+  <button :disabled="loading" x-text="loading ? 'Sending...' : 'Send'"></button>
 </form>
-```
-
----
-
-## 📧 Contact Form Pattern
-
-```blade
-<section id="contact" class="py-16 lg:py-24 bg-white dark:bg-[#0a0a0a]">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl lg:text-4xl font-semibold text-[#1b1b18] dark:text-[#EDEDEC] mb-4">
-        Get in Touch
-      </h2>
-      <p class="text-lg text-[#706f6c] dark:text-[#A1A09A]">
-        Have a project in mind? Let's discuss how we can help.
-      </p>
-    </div>
-    
-    <form action="{{ route('contact.send') }}" method="POST" class="space-y-6">
-      @csrf
-      
-      <div>
-        <label for="name" class="block text-sm font-medium text-[#1b1b18] dark:text-[#EDEDEC] mb-2">Name</label>
-        <input 
-          type="text" 
-          id="name" 
-          name="name" 
-          required
-          class="w-full px-4 py-2 border border-[#e3e3e0] dark:border-[#3E3E3A] bg-white dark:bg-[#161615] text-[#1b1b18] dark:text-[#EDEDEC] rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1b1b18] dark:focus:ring-white"
-        >
-      </div>
-      
-      <div>
-        <label for="email" class="block text-sm font-medium text-[#1b1b18] dark:text-[#EDEDEC] mb-2">Email</label>
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          required
-          class="w-full px-4 py-2 border border-[#e3e3e0] dark:border-[#3E3E3A] bg-white dark:bg-[#161615] text-[#1b1b18] dark:text-[#EDEDEC] rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1b1b18] dark:focus:ring-white"
-        >
-      </div>
-      
-      <div>
-        <label for="phone" class="block text-sm font-medium text-[#1b1b18] dark:text-[#EDEDEC] mb-2">Phone (Optional)</label>
-        <input 
-          type="tel" 
-          id="phone" 
-          name="phone"
-          class="w-full px-4 py-2 border border-[#e3e3e0] dark:border-[#3E3E3A] bg-white dark:bg-[#161615] text-[#1b1b18] dark:text-[#EDEDEC] rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1b1b18] dark:focus:ring-white"
-        >
-      </div>
-      
-      <div>
-        <label for="message" class="block text-sm font-medium text-[#1b1b18] dark:text-[#EDEDEC] mb-2">Message</label>
-        <textarea 
-          id="message" 
-          name="message" 
-          rows="5" 
-          required
-          class="w-full px-4 py-2 border border-[#e3e3e0] dark:border-[#3E3E3A] bg-white dark:bg-[#161615] text-[#1b1b18] dark:text-[#EDEDEC] rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1b1b18] dark:focus:ring-white"
-        ></textarea>
-      </div>
-      
-      <button type="submit" class="w-full px-8 py-3 bg-[#1b1b18] dark:bg-white text-white dark:text-[#1b1b18] rounded-sm hover:bg-black dark:hover:bg-gray-200 transition-colors font-medium">
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
 ```
 
 ---
@@ -488,20 +423,20 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
 ## 🛠️ Code Quality Rules
 
 ### ✅ Always Do
-- Use dark mode classes for EVERY styled element
-- Mobile-first: Start with base class, add `sm:` `lg:` for larger screens
-- Reuse components: If markup repeats 2+, make it a component
-- Semantic HTML: Use `<nav>`, `<section>`, `<article>`, `<footer>`
-- Accessible: Add `aria-label` to icon-only buttons
-- Consistent spacing: Use design system values (py-16, py-24, gap-6, gap-8)
+- Dark mode classes for EVERY colored element
+- Mobile-first: `text-base lg:text-lg` (not reverse)
+- Reuse components if markup repeats 2+ times
+- Semantic HTML: `<nav>`, `<section>`, `<footer>`
+- Accessible: `aria-label` on icon-only buttons
+- Design system values: `py-16`, `py-24`, `gap-6`, `gap-8`
 
 ### ❌ Never Do
-- No custom CSS (use Tailwind utilities only)
-- No inline styles (`style=""`)
-- No hardcoded colors outside design system
-- No `w-[fixed]` widths (use `max-w-*` instead)
-- No `!important` (fix specificity properly)
-- No empty `<div>` for spacing (use margin/padding classes)
+- Custom CSS (Tailwind only)
+- Inline styles (`style=""`)
+- Hardcoded colors outside design system
+- Fixed widths (`w-[500px]` - use `max-w-*`)
+- `!important` (fix specificity properly)
+- Empty divs for spacing (use margin/padding classes)
 
 ### Blade Syntax Standards
 ```blade
@@ -513,51 +448,49 @@ grid-cols-1 lg:grid-cols-2                 /* Two-column sections */
   <p>{{ $subtitle }}</p>
 @endif
 
-{{-- Good: Loops --}}
-@foreach($services as $service)
-  <x-service-card :title="$service->name" />
-@endforeach
-
-{{-- Good: Escaping --}}
+{{-- Good: Safe output --}}
 {{ $userInput }}  {{-- Auto-escaped --}}
-{!! $trustedHtml !!}  {{-- Unescaped --}}
 ```
 
 ---
 
 ## 📋 Quick Reference
 
-### Layout Structure
+### Landing Page Structure (5 Main Sections)
 ```
-resources/views/
-├── layouts/
-│   └── app.blade.php           # Base: <!DOCTYPE>, <head>, navbar, footer
-├── components/
-│   ├── navbar.blade.php        # Sticky navigation
-│   ├── footer.blade.php        # Site footer
-│   ├── service-card.blade.php  # Service grid item
-│   ├── stat-item.blade.php     # Stat display
-│   └── section-heading.blade.php # Section titles
-└── landing.blade.php           # Main landing page
+1. Hero - Full-width, gradient background, centered CTA
+2. Services - 8-card grid, service offerings
+3. Technology - Client logos, 4-column grid
+4. Stats - 4 metrics in 2/4 column grid
+5. Materials - Two-column, image + content
 ```
 
 ### Content Copy
-```
-Hero:
-- "The Leader in Quality Custom Print"
-- "Turn your ideas into premium products that leave a lasting impression"
 
-Services (8):
-Marketing Materials, Signs & Posters, Clothings & Bags, Merchandises,
-Fuji Film Photos Print, Labels & Stickers, Neon Box, Wallpapers Custom
+**Hero:**
+- Heading: "The Leader in Quality Custom Print"
+- Subheading: "Turn your ideas into premium products that leave a lasting impression"
+- Button: "View Our Services"
 
-Stats (4):
-1000+ Projects | 99% Satisfied | 15+ Years | 4 Locations
+**Services (8 cards):**
+Marketing Materials, Signs & Posters, Clothings & Bags, Merchandises, Fuji Film Photos Print, Labels & Stickers, Neon Box, Wallpapers Custom
 
-Materials:
-- "Best materials, for the best result"
-- "We use only the finest materials to ensure every print delivers superior quality, rich colors, and a flawless finish."
-```
+**Technology:**
+- Banner: "POWERED BY THE NEWEST PRINTING TECHNOLOGY IN SURABAYA"
+- Heading: "Discover our newest printing technology"
+- Logos: BCA, Pizza, Mandiri, TOYOTA
+
+**Stats:**
+- Title: "PERFECTION IN PRINTING"
+- 1000+ | Project Finished
+- 99% | Satisfied Clients
+- 15+ | Years Experience
+- 4 | Opened Location
+
+**Materials:**
+- Heading: "Best materials, for the best result"
+- Body: "We use only the finest materials to ensure every print delivers superior quality, rich colors, and a flawless finish."
+- Buttons: "Discover Now!" + "Get in Touch"
 
 ---
 
@@ -569,11 +502,10 @@ When generating code:
 3. **Include dark mode** - Every color needs `dark:` variant
 4. **Make it responsive** - Test mental model: 375px, 768px, 1280px
 5. **Use components** - Leverage `<x-*>` for repeated markup
-6. **Stay semantic** - Proper HTML5 tags, accessibility attributes
+6. **Stay semantic** - Proper HTML5 tags, accessibility
 
-This is a Phase 1 landing page. Focus on visual quality and responsive design. Interactivity (mobile menu, dark toggle) comes in Phase 2.
+This is Phase 1: Static landing page. Focus on visual quality and responsive design.
 
 ---
 
-**Last Updated:** 2026-07-31  
-**Questions?** Reference `/implementation_plan.md` for full context.
+**Reference:** See `.kiro/steering/conventions.md` for detailed development workflow and troubleshooting.
