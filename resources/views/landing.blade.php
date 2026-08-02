@@ -1,113 +1,193 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- Section 1: Hero --}}
-<section class="py-16 lg:py-24 min-h-[500px] lg:min-h-[600px] flex items-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-[#161615] dark:to-[#0a0a0a]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-[#1b1b18] dark:text-[#EDEDEC] mb-6">
-            The Leader in Quality<br>Custom Print
-        </h1>
-        <p class="text-lg lg:text-xl text-[#706f6c] dark:text-[#A1A09A] leading-relaxed mb-8 max-w-2xl mx-auto">
-            Turn your ideas into premium products that leave a lasting impression
-        </p>
-        <a href="#services" class="inline-block px-8 py-3 bg-[#1b1b18] dark:bg-white text-white dark:text-[#1b1b18] rounded-sm hover:bg-black dark:hover:bg-gray-200 transition-colors font-medium">
-            View Our Services
-        </a>
+<section class="bg-[#f6f6f6] dark:bg-[#0a0a0a] pt-10 lg:pt-14 pb-6 overflow-visible">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
+        <div class="relative z-20">
+            <h1 class="text-5xl sm:text-6xl lg:text-[96px] font-semibold leading-[0.92] tracking-[-0.03em] text-[#343434] dark:text-[#EDEDEC] mb-6">
+                The Leader<br>in Quality<br>Custom Print
+            </h1>
+            <p class="text-lg lg:text-[24px] lg:leading-[1.25] text-[#545454] dark:text-[#A1A09A] mb-8 max-w-xl">
+                Turn your ideas into premium products that leave a lasting impression
+            </p>
+            <a href="/products" class="inline-flex items-center gap-2 px-6 py-2.5 text-[26px] leading-none font-semibold bg-[#ff6705] text-white rounded-full hover:bg-[#e85d04] transition-colors">
+                Discover Now! ↗
+            </a>
+        </div>
+
+        <div class="relative min-h-[400px] lg:min-h-[620px] overflow-visible">
+            <div class="absolute top-10 lg:top-16 left-8 lg:left-4 w-[300px] h-[300px] lg:w-[430px] lg:h-[430px] rounded-full bg-[#ffc30f]"></div>
+            <img src="/images/homepage/technology-magazine.png" alt="Magazine" class="absolute top-4 lg:top-0 right-8 lg:right-4 w-52 lg:w-96 object-contain rotate-12 drop-shadow-2xl z-20">
+            <img src="/images/homepage/materials-printer-large.png" alt="Printer" class="absolute -bottom-20 lg:-bottom-40 -right-44 lg:-right-72 w-[760px] lg:w-[1200px] max-w-none object-contain z-10">
+        </div>
     </div>
 </section>
 
-{{-- Section 2: Services Grid --}}
-<section id="services" class="py-16 lg:py-24 bg-white dark:bg-[#0a0a0a]">
+<section class="bg-transparent py-0">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl lg:text-5xl font-semibold text-[#1b1b18] dark:text-[#EDEDEC] mb-4">
-                Our Services
+        <div class="bg-gradient-to-r from-[#ff6705] to-[#ff8b21] rounded-t-[44px] pt-16 lg:pt-18 pb-16 lg:pb-20 px-6 lg:px-12 text-center">
+            <p class="text-sm uppercase tracking-[0.25em] text-white font-semibold mb-4">LET’S GET PRINTING</p>
+            <h2 class="text-4xl lg:text-[64px] font-semibold text-white mb-6 leading-[0.95]">
+                Reasons to get printing<br>started with us
             </h2>
-            <p class="text-lg text-[#706f6c] dark:text-[#A1A09A]">
-                Professional printing solutions for all your needs
+            <p class="text-base lg:text-[21px] leading-[1.2] text-white/95 max-w-4xl mx-auto mb-14">
+                Our dedicated staff makes it easy for you to create a high quality custom print that will impress your clients and make you stand out from the crowd.
             </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div class="px-4">
+                    <div class="w-16 h-16 mx-auto mb-4 text-white">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-full h-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 9V5a2 2 0 0 1 2-2h4M21 9V5a2 2 0 0 0-2-2h-4M3 15v4a2 2 0 0 0 2 2h4M21 15v4a2 2 0 0 1-2 2h-4M8 8h8v8H8z"/>
+                        </svg>
+                    </div>
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-[#ffd777] text-[#ff6705] text-[22px] lg:text-[26px] leading-none font-semibold mb-4">Biggest Capacity</div>
+                    <p class="text-[16px] leading-[1.25] text-white/95 max-w-xs mx-auto">High capacity productions, built to handle large-volume orders with ease, so you can scale without limits.</p>
+                </div>
+                <div class="px-4">
+                    <div class="w-16 h-16 mx-auto mb-4 text-white">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-full h-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4-8 4-8-4 8-4zM4 11l8 4 8-4M4 15l8 4 8-4"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.5l2.5 2.5-2.5 2.5-2.5-2.5 2.5-2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-[#ffd777] text-[#ff6705] text-[22px] lg:text-[26px] leading-none font-semibold mb-4">Best Material</div>
+                    <p class="text-[16px] leading-[1.25] text-white/95 max-w-xs mx-auto">Materials that make a difference from premium paper to specialty finishes, we use only materials that elevate your final result.</p>
+                </div>
+                <div class="px-4">
+                    <div class="w-16 h-16 mx-auto mb-4 text-white">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-full h-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9V4h12v5M6 14H4v6h16v-6h-2M6 14h12v-5H6v5zM8 18h8"/>
+                        </svg>
+                    </div>
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-[#ffd777] text-[#ff6705] text-[22px] lg:text-[26px] leading-none font-semibold mb-4">Latest Technology</div>
+                    <p class="text-[16px] leading-[1.25] text-white/95 max-w-xs mx-auto">Continuously upgrade to the newest printing machine, bringing you advanced quality and performance, first in Surabaya.</p>
+                </div>
+            </div>
         </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <x-service-card title="Marketing Materials" href="#" image="/screenshots/images/1.png" />
-            <x-service-card title="Signs & Posters" href="#" image="/screenshots/images/2.png" />
-            <x-service-card title="Clothings & Bags" href="#" image="/screenshots/images/3.png" />
-            <x-service-card title="Merchandises" href="#" image="/screenshots/images/4.png" />
-            <x-service-card title="Fuji Film Photos Print" href="#" image="/screenshots/images/5.png" />
-            <x-service-card title="Labels & Stickers" href="#" image="/screenshots/images/6.png" />
-            <x-service-card title="Neon Box" href="#" image="/screenshots/images/7.png" />
-            <x-service-card title="Wallpapers Custom" href="#" image="/screenshots/images/8.png" />
+    </div>
+</section>
+
+<section id="services" class="py-16 lg:py-20 bg-[#e8e8e8] dark:bg-[#161615]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a href="/services" class="group text-center">
+                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                    <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">MARKETING MATERIALS</h3>
+                    <img src="/images/homepage/marketing-materials.png" alt="Marketing Materials" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                </div>
+            </a>
+            <a href="/services" class="group text-center">
+                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                    <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">SIGNS &amp; POSTERS</h3>
+                    <img src="/images/homepage/service-roll-banner.png" alt="Signs and Posters" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                </div>
+            </a>
+            <a href="/services" class="group text-center">
+                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                    <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">CLOTHINGS &amp; BAGS</h3>
+                    <img src="/images/homepage/clothings-bags.png" alt="Clothings and Bags" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                </div>
+            </a>
+            <a href="/services" class="group text-center">
+                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                    <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">MERCHANDISES</h3>
+                    <img src="/images/homepage/merchandises.png" alt="Merchandises" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                </div>
+            </a>
+            <a href="/services" class="group text-center">
+                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                    <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">FUJI FILM PHOTOS PRINT</h3>
+                    <img src="/images/homepage/fuji-film-photos-print.png" alt="Fuji Film Photos Print" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                </div>
+            </a>
+            <a href="/services" class="group text-center">
+                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                    <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">LABELS &amp; STICKERES</h3>
+                    <img src="/images/homepage/labels-stickers.png" alt="Labels and Stickers" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                </div>
+            </a>
+            <a href="/services" class="group text-center">
+                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                    <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">NEON BOX</h3>
+                    <img src="/images/homepage/neon-box.png" alt="Neon Box" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                </div>
+            </a>
+            <a href="/services" class="group text-center">
+                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                    <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">WALLPAPERS CUSTOM</h3>
+                    <img src="/images/homepage/wallpapers-custom.jpg" alt="Wallpapers Custom" class="w-full h-40 object-cover mt-auto group-hover:scale-105 transition-transform rounded-md">
+                </div>
+            </a>
         </div>
-        
-        <div class="text-center">
-            <a href="#" class="inline-block px-8 py-3 bg-[#1b1b18] dark:bg-white text-white dark:text-[#1b1b18] rounded-sm hover:bg-black dark:hover:bg-gray-200 transition-colors font-medium">
-                See All Services
+
+        <div class="text-center mt-14">
+            <a href="/services" class="inline-flex items-center gap-2 px-8 py-3 text-[20px] lg:text-[24px] leading-none font-semibold bg-[#ff6705] text-white rounded-full hover:bg-[#e85d04] transition-colors">
+                See our service more ↗
             </a>
         </div>
     </div>
 </section>
 
-{{-- Section 3: Technology/Client Logos --}}
-<section class="py-16 lg:py-24 bg-gray-50 dark:bg-[#161615]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <p class="text-xs uppercase tracking-wider text-[#706f6c] dark:text-[#A1A09A] mb-4">
-                POWERED BY THE NEWEST PRINTING TECHNOLOGY IN SURABAYA
-            </p>
-            <h2 class="text-4xl lg:text-5xl font-semibold text-[#1b1b18] dark:text-[#EDEDEC]">
-                Discover our newest printing technology
-            </h2>
+<section class="bg-white dark:bg-[#0a0a0a] py-0">
+    <div class="max-w-none">
+        <div class="mx-auto w-full rounded-md overflow-hidden bg-gradient-to-r from-black via-[#4b4b4b] to-[#8b8b8b] min-h-[410px] lg:min-h-[560px] relative px-8 lg:px-14 py-10 lg:py-12">
+            <div class="max-w-xl relative z-20">
+                <p class="text-sm uppercase tracking-[0.2em] text-white font-semibold mb-4">
+                    POWERED BY THE NEWEST PRINTING TECHNOLOGY IN SURABAYA
+                </p>
+                <h2 class="text-5xl lg:text-8xl leading-[0.92] font-semibold text-white mb-8">
+                    Discover our<br>newest printing<br>technology
+                </h2>
+                <a href="/products" class="inline-flex items-center gap-2 px-6 py-2.5 text-3xl font-semibold border-2 border-white text-white rounded-full hover:bg-white hover:text-[#343434] transition-colors">
+                    Discover Now! ↗
+                </a>
+            </div>
+            <img src="/images/homepage/materials-printer-large.png" alt="Printer" class="absolute right-0 bottom-[-80px] w-[900px] lg:w-[1150px] max-w-none object-contain z-10">
         </div>
-        
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <x-client-logo name="BCA" src="/screenshots/images/9.png" />
-            <x-client-logo name="Pizza" src="/screenshots/images/10.png" />
-            <x-client-logo name="Mandiri" src="/screenshots/images/11.png" />
-            <x-client-logo name="TOYOTA" src="/screenshots/images/12.png" />
+
+        <div class="py-14 lg:py-16 text-center bg-white dark:bg-[#0a0a0a]">
+            <p class="text-3xl uppercase tracking-[0.2em] text-[#f35b04] font-semibold mb-10">THANK YOU FOR YOUR TRUST</p>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-10 items-center text-[#7c7c7c] dark:text-[#A1A09A]">
+                <span class="text-[46px] font-semibold">BCA</span>
+                <span class="text-[46px] font-semibold">GREENLAND</span>
+                <span class="text-[46px] font-semibold">Pizza Hut</span>
+                <span class="text-[46px] font-semibold">mandiri</span>
+                <span class="text-[46px] font-semibold lg:col-span-2">TOYOTA</span>
+            </div>
         </div>
     </div>
 </section>
 
-{{-- Section 4: Stats --}}
-<section class="py-16 lg:py-24 bg-white dark:bg-[#0a0a0a]">
+<section class="py-10 lg:py-12 bg-[#ffc30f] dark:bg-[#161615]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <p class="text-xs uppercase tracking-wider text-[#706f6c] dark:text-[#A1A09A]">
-                PERFECTION IN PRINTING
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12 lg:mb-14">
             <x-stat-item number="1000+" label="Project Finished" />
             <x-stat-item number="99%" label="Satisfied Clients" />
             <x-stat-item number="15+" label="Years Experience" />
             <x-stat-item number="4" label="Opened Location" />
         </div>
-    </div>
-</section>
 
-{{-- Section 5: Materials/Quality --}}
-<section class="py-16 lg:py-24 bg-gray-50 dark:bg-[#161615]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div class="order-2 lg:order-1">
-                <div class="aspect-square bg-gray-200 dark:bg-[#1a1a1a] rounded-lg overflow-hidden">
-                    <img src="/screenshots/images/13.png" alt="Material Quality" class="w-full h-full object-cover">
-                </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+            <div class="order-2 lg:order-2">
+                <img src="/images/homepage/business-cards-stack.png" alt="Business cards stack" class="w-full object-contain drop-shadow-2xl">
             </div>
-            
-            <div class="order-1 lg:order-2">
-                <h2 class="text-4xl lg:text-5xl font-semibold text-[#1b1b18] dark:text-[#EDEDEC] mb-6">
+
+            <div class="order-1 lg:order-1">
+                <p class="text-sm uppercase tracking-[0.2em] text-[#545454] dark:text-[#A1A09A] font-semibold mb-3">
+                    PERFECTION IN PRINTING
+                </p>
+                <h2 class="text-5xl lg:text-8xl font-semibold leading-[0.95] text-[#343434] dark:text-[#EDEDEC] mb-5">
                     Best materials, for the best result
                 </h2>
-                <p class="text-lg text-[#706f6c] dark:text-[#A1A09A] leading-relaxed mb-8">
+                <p class="text-3xl text-[#545454] dark:text-[#A1A09A] leading-relaxed mb-8 max-w-xl">
                     We use only the finest materials to ensure every print delivers superior quality, rich colors, and a flawless finish.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#" class="inline-block px-8 py-3 bg-[#1b1b18] dark:bg-white text-white dark:text-[#1b1b18] rounded-sm hover:bg-black dark:hover:bg-gray-200 transition-colors font-medium text-center">
-                        Discover Now!
+                    <a href="/products" class="inline-flex items-center justify-center px-8 py-3 text-3xl font-semibold border-2 border-[#343434] text-[#343434] dark:border-white dark:text-white rounded-full hover:bg-[#343434] hover:text-white dark:hover:bg-white dark:hover:text-[#1b1b18] transition-colors">
+                        Discover Now! ↗
                     </a>
-                    <a href="#contact" class="inline-block px-6 py-2 border border-[#1b1b18] dark:border-white text-[#1b1b18] dark:text-white rounded-sm hover:bg-[#1b1b18] hover:text-white dark:hover:bg-white dark:hover:text-[#1b1b18] transition-colors text-center flex items-center justify-center">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 text-3xl font-semibold border-2 border-[#343434] text-[#343434] dark:border-white dark:text-white rounded-full hover:bg-[#343434] hover:text-white dark:hover:bg-white dark:hover:text-[#1b1b18] transition-colors">
                         Get in Touch
                     </a>
                 </div>
