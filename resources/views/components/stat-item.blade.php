@@ -1,10 +1,10 @@
 @props(['number', 'label'])
 
 <div class="text-center">
-    <div class="text-5xl lg:text-6xl font-semibold text-[#343434] dark:text-[#EDEDEC] mb-2 leading-none">
+    <div class="text-3xl lg:text-4xl font-semibold text-[#343434] dark:text-[#EDEDEC] mb-1 leading-none">
         {{ $number }}
     </div>
-    <div class="text-3xl text-[#545454] dark:text-[#A1A09A] leading-none">
+    <div class="text-base lg:text-lg text-[#545454] dark:text-[#A1A09A] leading-none">
         {{ $label }}
     </div>
 </div>

@@ -4,28 +4,28 @@
 <section class="bg-[#f6f6f6] dark:bg-[#0a0a0a] pt-10 lg:pt-14 pb-6 overflow-visible">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center">
         <div class="relative z-20">
-            <h1 class="text-5xl sm:text-6xl lg:text-[96px] font-semibold leading-[0.92] tracking-[-0.03em] text-[#343434] dark:text-[#EDEDEC] mb-6">
+            <h1 class="text-5xl sm:text-6xl lg:text-[72px] font-extrabold leading-[0.92] tracking-[-0.03em] text-[#343434] dark:text-[#EDEDEC] mb-6">
                 The Leader<br>in Quality<br>Custom Print
             </h1>
-            <p class="text-lg lg:text-[24px] lg:leading-[1.25] text-[#545454] dark:text-[#A1A09A] mb-8 max-w-xl">
+            <p class="text-lg lg:text-[20px] lg:leading-[1.25] text-[#545454] dark:text-[#A1A09A] mb-8 max-w-xl">
                 Turn your ideas into premium products that leave a lasting impression
             </p>
-            <a href="/products" class="inline-flex items-center gap-2 px-6 py-2.5 text-[26px] leading-none font-semibold bg-[#ff6705] text-white rounded-full hover:bg-[#e85d04] transition-colors">
+            <a href="/products" class="inline-flex items-center gap-2 px-6 py-2.5 text-[22px] leading-none font-semibold bg-[#ff6705] text-white rounded-full hover:bg-[#e85d04] transition-colors">
                 Discover Now! ↗
             </a>
         </div>
 
-        <div class="relative min-h-[400px] lg:min-h-[620px] overflow-visible">
-            <div class="absolute top-10 lg:top-16 left-8 lg:left-4 w-[300px] h-[300px] lg:w-[430px] lg:h-[430px] rounded-full bg-[#ffc30f]"></div>
-            <img src="/images/homepage/technology-magazine.png" alt="Magazine" class="absolute top-4 lg:top-0 right-8 lg:right-4 w-52 lg:w-96 object-contain rotate-12 drop-shadow-2xl z-20">
-            <img src="/images/homepage/materials-printer-large.png" alt="Printer" class="absolute -bottom-20 lg:-bottom-40 -right-44 lg:-right-72 w-[760px] lg:w-[1200px] max-w-none object-contain z-10">
+        <div class="relative min-h-[400px] lg:min-h-[500px] overflow-visible">
+            <div class="absolute top-10 lg:top-16 left-8 lg:left-4 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] rounded-full bg-[#ffc30f]"></div>
+            <img src="/images/homepage/technology-magazine.png" alt="Magazine" class="absolute top-0 lg:-top-4 right-4 lg:right-0 w-56 lg:w-96 object-contain rotate-12 drop-shadow-2xl z-20">
+            <img src="/images/homepage/materials-printer-large.png" alt="Printer" class="absolute -bottom-16 lg:-bottom-24 -right-32 lg:-right-48 w-[450px] lg:w-[650px] max-w-none object-contain z-10">
         </div>
     </div>
 </section>
 
 <section class="bg-transparent py-0">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-r from-[#ff6705] to-[#ff8b21] rounded-t-[44px] pt-16 lg:pt-18 pb-16 lg:pb-20 px-6 lg:px-12 text-center">
+        <div class="bg-gradient-to-r from-[#ff6705] to-[#ff8b21] rounded-[44px] pt-16 lg:pt-18 pb-16 lg:pb-20 px-6 lg:px-12 text-center">
             <p class="text-sm uppercase tracking-[0.25em] text-white font-semibold mb-4">LET’S GET PRINTING</p>
             <h2 class="text-4xl lg:text-[64px] font-semibold text-white mb-6 leading-[0.95]">
                 Reasons to get printing<br>started with us
@@ -149,36 +149,37 @@
 </section>
 
 <section class="bg-white dark:bg-[#0a0a0a] py-0">
-    <div class="max-w-none">
-        <div class="mx-auto w-full rounded-md overflow-hidden bg-gradient-to-r from-black via-[#4b4b4b] to-[#8b8b8b] min-h-[410px] lg:min-h-[560px] relative px-8 lg:px-14 py-10 lg:py-12">
+    <div class="w-full bg-gradient-to-r from-black via-[#4b4b4b] to-[#8b8b8b] min-h-[410px] lg:min-h-[560px] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full py-10 lg:py-12">
             <div class="max-w-xl relative z-20">
                 <p class="text-sm uppercase tracking-[0.2em] text-white font-semibold mb-4">
                     POWERED BY THE NEWEST PRINTING TECHNOLOGY IN SURABAYA
                 </p>
-                <h2 class="text-5xl lg:text-8xl leading-[0.92] font-semibold text-white mb-8">
+                <h2 class="text-4xl lg:text-6xl leading-[0.92] font-semibold text-white mb-8">
                     Discover our<br>newest printing<br>technology
                 </h2>
-                <a href="/products" class="inline-flex items-center gap-2 px-6 py-2.5 text-3xl font-semibold border-2 border-white text-white rounded-full hover:bg-white hover:text-[#343434] transition-colors">
+                <a href="/products" class="inline-flex items-center gap-2 px-6 py-2.5 text-2xl font-semibold border-2 border-white text-white rounded-full hover:bg-white hover:text-[#343434] transition-colors">
                     Discover Now! ↗
                 </a>
             </div>
-            <img src="/images/homepage/materials-printer-large.png" alt="Printer" class="absolute right-0 top-1/2 -translate-y-1/2 object-contain z-10 scale-x-[-1]" style="width: 888.246px; height: 626.213px;">
+            <img src="/images/homepage/materials-printer-large.png" alt="Printer" class="absolute right-0 top-1/2 -translate-y-1/2 object-contain z-10 scale-x-[-1]" style="width: 700px; height: 494px;">
         </div>
+    </div>
 
         <div class="py-14 lg:py-16 text-center bg-white dark:bg-[#0a0a0a]">
             <p class="text-3xl uppercase tracking-[0.2em] text-[#f35b04] font-semibold mb-10">THANK YOU FOR YOUR TRUST</p>
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-10 items-center text-[#7c7c7c] dark:text-[#A1A09A]">
-                <span class="text-[46px] font-semibold">BCA</span>
-                <span class="text-[46px] font-semibold">GREENLAND</span>
-                <span class="text-[46px] font-semibold">Pizza Hut</span>
-                <span class="text-[46px] font-semibold">mandiri</span>
-                <span class="text-[46px] font-semibold lg:col-span-2">TOYOTA</span>
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10 items-center">
+                <img src="/images/homepage/client-bca.png" alt="BCA" class="h-12 lg:h-16 object-contain mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                <img src="/images/homepage/client-greenland.png" alt="Greenland" class="h-12 lg:h-16 object-contain mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                <img src="/images/homepage/client-pizzahut.png" alt="Pizza Hut" class="h-12 lg:h-16 object-contain mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                <img src="/images/homepage/client-mandiri.png" alt="Mandiri" class="h-12 lg:h-16 object-contain mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+                <img src="/images/homepage/client-toyota.png" alt="Toyota" class="h-12 lg:h-16 object-contain mx-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-10 lg:py-12 bg-[#ffc30f] dark:bg-[#161615]">
+<section class="py-10 lg:py-12 bg-[#ffc30f] dark:bg-[#161615] min-h-screen relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12 lg:mb-14">
             <x-stat-item number="1000+" label="Project Finished" />
@@ -188,27 +189,62 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-            <div class="order-2 lg:order-2">
-                <img src="/images/homepage/business-cards-stack.png" alt="Business cards stack" class="w-full object-contain drop-shadow-2xl">
+            <div class="order-2 lg:order-2 relative">
+                <img src="/images/homepage/business-cards-stack.png" alt="Business cards stack" class="w-full object-contain drop-shadow-2xl relative z-10">
             </div>
 
             <div class="order-1 lg:order-1">
                 <p class="text-sm uppercase tracking-[0.2em] text-[#545454] dark:text-[#A1A09A] font-semibold mb-3">
                     PERFECTION IN PRINTING
                 </p>
-                <h2 class="text-5xl lg:text-8xl font-semibold leading-[0.95] text-[#343434] dark:text-[#EDEDEC] mb-5">
+                <h2 class="text-4xl lg:text-6xl font-semibold leading-[0.95] text-[#343434] dark:text-[#EDEDEC] mb-5">
                     Best materials, for the best result
                 </h2>
-                <p class="text-3xl text-[#545454] dark:text-[#A1A09A] leading-relaxed mb-8 max-w-xl">
+                <p class="text-xl lg:text-2xl text-[#545454] dark:text-[#A1A09A] leading-relaxed mb-8 max-w-xl">
                     We use only the finest materials to ensure every print delivers superior quality, rich colors, and a flawless finish.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="/products" class="inline-flex items-center justify-center px-8 py-3 text-3xl font-semibold border-2 border-[#343434] text-[#343434] dark:border-white dark:text-white rounded-full hover:bg-[#343434] hover:text-white dark:hover:bg-white dark:hover:text-[#1b1b18] transition-colors">
+                    <a href="/products" class="inline-flex items-center justify-center px-8 py-3 text-xl font-semibold border-2 border-[#343434] text-[#343434] dark:border-white dark:text-white rounded-full hover:bg-[#343434] hover:text-white dark:hover:bg-white dark:hover:text-[#1b1b18] transition-colors">
                         Discover Now! ↗
                     </a>
-                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 text-3xl font-semibold border-2 border-[#343434] text-[#343434] dark:border-white dark:text-white rounded-full hover:bg-[#343434] hover:text-white dark:hover:bg-white dark:hover:text-[#1b1b18] transition-colors">
-                        Get in Touch
-                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer floating on top -->
+    <div class="absolute bottom-0 left-0 right-0 z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-0">
+            <div class="bg-white dark:bg-[#161615] rounded-t-[40px] pt-12 pb-8 px-8 lg:px-12 shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start mb-8">
+                    <div>
+                        <div class="w-16 h-16 rounded-full bg-[#343434] text-white flex items-center justify-center font-bold text-lg">LOGO</div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold text-[#343434] dark:text-[#EDEDEC] mb-4">Get in Touch</h4>
+                        <div class="text-sm text-[#545454] dark:text-[#A1A09A] space-y-1">
+                            <p>Lorem Ipsum</p>
+                            <p>support@example.com</p>
+                            <p class="font-semibold mt-2">+ 6281 - 0066 - 8977</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold text-[#343434] dark:text-[#EDEDEC] mb-4">Social Media</h4>
+                        <div class="flex items-center gap-4">
+                            <img src="/images/homepage/instagram-icon.png" alt="Instagram" class="w-8 h-8">
+                            <img src="/images/homepage/youtube-icon.png" alt="YouTube" class="w-8 h-8">
+                            <img src="/images/homepage/whatsapp-icon.png" alt="WhatsApp" class="w-8 h-8">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6 border-t border-[#e3e3e0] dark:border-[#3E3E3A] flex flex-col lg:flex-row items-center justify-between gap-4">
+                    <p class="text-sm text-[#545454] dark:text-[#A1A09A]">
+                        Copyright @ 2025 <span class="font-semibold">Paperku</span>. All rights reserved
+                    </p>
+                    <img src="/images/homepage/payment-methods.png" alt="Payment methods" class="h-6 object-contain">
                 </div>
             </div>
         </div>
