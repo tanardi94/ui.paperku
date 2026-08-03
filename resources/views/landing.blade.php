@@ -70,53 +70,72 @@
 
 <section id="services" class="py-16 lg:py-20 bg-[#e8e8e8] dark:bg-[#161615]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="/services" class="group text-center">
-                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                <div class="rounded-[26px] bg-white p-5 min-h-[280px] flex flex-col">
                     <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">MARKETING MATERIALS</h3>
-                    <img src="/images/homepage/marketing-materials.png" alt="Marketing Materials" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                    <div class="flex-1 flex items-end justify-center relative">
+                        <img src="/images/homepage/business-cards-stack.png" alt="Business Cards" class="h-44 w-32 object-contain group-hover:scale-105 transition-transform relative z-10">
+                        <img src="/images/homepage/service-brochure.png" alt="Brochure" class="h-44 w-32 object-contain group-hover:scale-105 transition-transform relative -ml-4 z-0">
+                    </div>
                 </div>
             </a>
             <a href="/services" class="group text-center">
-                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                <div class="rounded-[26px] bg-white p-5 min-h-[280px] flex flex-col">
                     <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">SIGNS &amp; POSTERS</h3>
-                    <img src="/images/homepage/service-roll-banner.png" alt="Signs and Posters" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                    <div class="flex-1 flex items-end justify-center relative">
+                        <img src="/images/homepage/service-roll-banner.png" alt="Roll Banner" class="h-44 w-32 object-contain group-hover:scale-105 transition-transform relative z-10">
+                        <img src="/images/homepage/signs-posters.png" alt="Poster" class="h-44 w-32 object-contain group-hover:scale-105 transition-transform relative -ml-4 z-0">
+                    </div>
                 </div>
             </a>
             <a href="/services" class="group text-center">
-                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                <div class="rounded-[26px] bg-white p-5 min-h-[280px] flex flex-col">
                     <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">CLOTHINGS &amp; BAGS</h3>
-                    <img src="/images/homepage/clothings-bags.png" alt="Clothings and Bags" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                    <div class="flex-1 flex items-end justify-center">
+                        <img src="/images/homepage/service-tshirt.png" alt="T-Shirt" class="h-52 w-44 object-contain group-hover:scale-105 transition-transform">
+                    </div>
                 </div>
             </a>
             <a href="/services" class="group text-center">
-                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                <div class="rounded-[26px] bg-white p-5 min-h-[280px] flex flex-col">
                     <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">MERCHANDISES</h3>
-                    <img src="/images/homepage/merchandises.png" alt="Merchandises" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                    <div class="flex-1 flex items-end justify-center relative">
+                        <img src="/images/homepage/technology-fan-print.png" alt="Fan" class="h-44 w-32 object-contain group-hover:scale-105 transition-transform relative z-10">
+                        <img src="/images/homepage/merchandises.png" alt="Bottles" class="h-44 w-32 object-contain group-hover:scale-105 transition-transform relative -ml-4 z-0">
+                    </div>
                 </div>
             </a>
             <a href="/services" class="group text-center">
-                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                <div class="rounded-[26px] bg-white p-5 min-h-[280px] flex flex-col">
                     <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">FUJI FILM PHOTOS PRINT</h3>
-                    <img src="/images/homepage/fuji-film-photos-print.png" alt="Fuji Film Photos Print" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                    <div class="flex-1 flex items-end justify-center">
+                        <img src="/images/homepage/fuji-film-photos-print.png" alt="Photo Print" class="h-52 w-44 object-contain group-hover:scale-105 transition-transform">
+                    </div>
                 </div>
             </a>
             <a href="/services" class="group text-center">
-                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                <div class="rounded-[26px] bg-white p-5 min-h-[280px] flex flex-col">
                     <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">LABELS &amp; STICKERES</h3>
-                    <img src="/images/homepage/labels-stickers.png" alt="Labels and Stickers" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                    <div class="flex-1 flex items-end justify-center">
+                        <img src="/images/homepage/labels-stickers.png" alt="Sticker" class="h-52 w-44 object-contain group-hover:scale-105 transition-transform">
+                    </div>
                 </div>
             </a>
             <a href="/services" class="group text-center">
-                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                <div class="rounded-[26px] bg-white p-5 min-h-[280px] flex flex-col">
                     <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">NEON BOX</h3>
-                    <img src="/images/homepage/neon-box.png" alt="Neon Box" class="w-full h-40 object-contain mt-auto group-hover:scale-105 transition-transform">
+                    <div class="flex-1 flex items-end justify-center">
+                        <img src="/images/homepage/neon-box.png" alt="Neon Box" class="h-52 w-44 object-contain group-hover:scale-105 transition-transform">
+                    </div>
                 </div>
             </a>
             <a href="/services" class="group text-center">
-                <div class="rounded-[26px] bg-white p-5 min-h-[250px] flex flex-col">
+                <div class="rounded-[26px] bg-white p-5 min-h-[280px] flex flex-col">
                     <h3 class="text-[14px] lg:text-[16px] leading-tight font-semibold uppercase text-left text-[#343434] mb-3">WALLPAPERS CUSTOM</h3>
-                    <img src="/images/homepage/wallpapers-custom.jpg" alt="Wallpapers Custom" class="w-full h-40 object-cover mt-auto group-hover:scale-105 transition-transform rounded-md">
+                    <div class="flex-1 flex items-end justify-center">
+                        <img src="/images/homepage/wallpapers-custom.jpg" alt="Wallpaper" class="h-52 w-44 object-cover group-hover:scale-105 transition-transform rounded-md">
+                    </div>
                 </div>
             </a>
         </div>
@@ -143,7 +162,7 @@
                     Discover Now! ↗
                 </a>
             </div>
-            <img src="/images/homepage/materials-printer-large.png" alt="Printer" class="absolute right-0 bottom-[-80px] w-[900px] lg:w-[1150px] max-w-none object-contain z-10">
+            <img src="/images/homepage/materials-printer-large.png" alt="Printer" class="absolute right-0 top-1/2 -translate-y-1/2 object-contain z-10 scale-x-[-1]" style="width: 888.246px; height: 626.213px;">
         </div>
 
         <div class="py-14 lg:py-16 text-center bg-white dark:bg-[#0a0a0a]">

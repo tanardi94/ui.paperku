@@ -1,12 +1,4 @@
 <nav class="sticky top-0 z-50 bg-[#f6f6f6]/95 dark:bg-[#161615]/95 backdrop-blur-md border-b border-[#ececec] dark:border-[#3E3E3A]">
-    <div class="h-10 border-b border-[#ececec] dark:border-[#3E3E3A]">
-        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-full hidden md:flex items-center justify-end gap-10 text-[16px] leading-none font-medium text-[#7f8b97] dark:text-[#A1A09A]">
-            <span class="text-[#34495e] dark:text-[#EDEDEC] font-semibold">Halaman 1</span>
-            <span>Halaman 2</span>
-            <span>Halaman 3</span>
-        </div>
-    </div>
-
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-[104px] flex items-center justify-between">
         <div class="w-[72px] h-[72px] rounded-full bg-[#343434] text-white text-[19px] font-semibold leading-none flex items-center justify-center">LOGO</div>
 

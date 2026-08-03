@@ -141,3 +141,69 @@ Minimal Report Format For Agents
 - 3 biggest visual fixes
 - Remaining mismatch list
 - Next exact patch target
+
+## Ultra Compact Mode (Same Result)
+
+Use This Ultra Prompt
+```text
+Clone Canva to Blade. Priority: visual parity, low tokens.
+
+Input:
+- scrappings/homepage.html
+- scrappings/homepage_files/*
+- optional: scrappings/service.html, scrappings/product.html
+
+Output:
+- resources/views/landing.blade.php
+- resources/views/components/navbar.blade.php
+- resources/views/components/footer.blade.php
+- resources/views/layouts/app.blade.php
+- routes/web.php
+
+Rules:
+1. No Canva obfuscated classes.
+2. Tailwind utilities only.
+3. Section order exact.
+4. Text and CTA exact.
+5. Top area first, lock, then continue.
+6. Patch on mismatch. No long prose.
+
+Flow:
+A) map structure
+B) map assets to semantic names
+C) build top nav + hero
+D) build services, tech, stats, materials, footer
+E) validate routes (/ /services /products)
+F) QA by screenshot checkpoints
+
+Done if:
+- no broken images
+- no missing sections
+- composition close
+- type hierarchy close
+- mobile usable
+```
+
+Ultra Execution Script
+```bash
+rg --files scrappings | rg '\\.(png|jpg|jpeg|webp|svg)$'
+mkdir -p public/images/homepage
+# copy mapped images here
+php artisan route:list | rg "services|products|\\s/\\s"
+npm run dev
+php artisan serve
+```
+
+Ultra QA Checkpoints
+1. top strip + main nav
+2. hero composition and overlap
+3. services grid and CTA
+4. technology banner and visuals
+5. stats + materials yellow band
+6. footer social + payment strip
+
+Ultra Report Format
+- files changed
+- fixed now
+- still off
+- next patch
