@@ -3,10 +3,13 @@
         <div class="w-[72px] h-[72px] rounded-full bg-[#343434] text-white text-[19px] font-semibold leading-none flex items-center justify-center">LOGO</div>
 
         <div class="hidden md:flex items-center gap-10">
-            <a href="/" class="text-2xl leading-none font-semibold text-[#ff7613]">Home</a>
-            <a href="/services" class="text-2xl leading-none font-semibold text-[#535353] dark:text-[#A1A09A] underline underline-offset-8 hover:text-[#ff7613] transition-colors">Services</a>
-            <a href="/products" class="text-2xl leading-none font-semibold text-[#535353] dark:text-[#A1A09A] underline underline-offset-8 hover:text-[#ff7613] transition-colors">Products</a>
-            <a href="#contact" class="text-2xl leading-none font-semibold text-[#535353] dark:text-[#A1A09A] underline underline-offset-8 hover:text-[#ff7613] transition-colors">Get in Touch</a>
+            @php $active = request()->is('/') || request()->is(''); $link = 'text-2xl leading-none font-semibold underline underline-offset-8 hover:text-[#ff7613] transition-colors'; @endphp
+            <a href="/" class="{{ $link }} {{ $active ? 'text-[#ff7613]' : 'text-[#535353] dark:text-[#A1A09A]' }}">Home</a>
+            @php $active = request()->is('services*'); @endphp
+            <a href="/services" class="{{ $link }} {{ $active ? 'text-[#ff7613]' : 'text-[#535353] dark:text-[#A1A09A]' }}">Services</a>
+            @php $active = request()->is('products*'); @endphp
+            <a href="/products" class="{{ $link }} {{ $active ? 'text-[#ff7613]' : 'text-[#535353] dark:text-[#A1A09A]' }}">Products</a>
+            <a href="#contact" class="{{ $link }} text-[#535353] dark:text-[#A1A09A]">Get in Touch</a>
         </div>
 
         <button class="md:hidden text-[#1b1b18] dark:text-[#EDEDEC]" aria-label="Menu">

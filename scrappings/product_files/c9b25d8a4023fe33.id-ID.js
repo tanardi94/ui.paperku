@@ -1,0 +1,2 @@
+globalThis['cmsg']['assets']=globalThis['cmsg']['assets']||{};
+globalThis['cmsg']['assets']["id-ID"]=Object.assign(globalThis['cmsg']['assets']["id-ID"]||{},{"23019":{"js":["98f59d88f60eca71.strings.js"],"css":[]},"24447":{"js":["f0bbb1d2f1dc9d2f.strings.js"],"css":[]},"27560":{"js":["56fe699ae1861657.strings.js"],"css":[]},"44488":{"js":["2b00040e00cf76d8.strings.js"],"css":[]},"70386":{"js":["b7d498056db75d39.strings.js"],"css":[]},"72719":{"js":["c8d62ab66d616ac3.strings.js"],"css":[]},"74145":{"js":["78ee41252b324b4b.strings.js"],"css":[]}});
