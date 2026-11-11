@@ -91,32 +91,4 @@
     </div>
 </section>
 
-<footer id="contact" class="bg-[#f6f6f6] dark:bg-[#161615] border-t border-[#e3e3e0] dark:border-[#3E3E3A]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-10">
-            <div>
-                <h4 class="text-xl font-semibold text-[#343434] dark:text-[#EDEDEC] mb-4">Get in Touch</h4>
-                <div class="text-sm text-[#545454] dark:text-[#A1A09A] space-y-1">
-                    <p>Lorem Ipsum</p>
-                    <p>support@example.com</p>
-                    <p class="font-semibold mt-2">+ 6281 - 0066 - 8977</p>
-                </div>
-            </div>
-            <div>
-                <h4 class="text-xl font-semibold text-[#343434] dark:text-[#EDEDEC] mb-4">Social Media</h4>
-                <div class="flex items-center gap-4">
-                    <img src="/images/homepage/instagram-icon.png" alt="Instagram" class="w-8 h-8">
-                    <img src="/images/homepage/youtube-icon.png" alt="YouTube" class="w-8 h-8">
-                    <img src="/images/homepage/whatsapp-icon.png" alt="WhatsApp" class="w-8 h-8">
-                </div>
-            </div>
-        </div>
-        <div class="pt-6 border-t border-[#e3e3e0] dark:border-[#3E3E3A] flex flex-col lg:flex-row items-center justify-between gap-4">
-            <p class="text-sm text-[#545454] dark:text-[#A1A09A]">
-                Copyright @ 2025 <span class="font-semibold">Paperku</span>. All rights reserved
-            </p>
-            <img src="/images/homepage/payment-methods.png" alt="Payment methods" class="h-6 object-contain">
-        </div>
-    </div>
-</footer>
 @endsection

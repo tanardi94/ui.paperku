@@ -26,6 +26,8 @@
 
         @yield('content')
 
+        <x-footer />
+
         <a
             href="https://wa.me/628100668977"
             target="_blank"
